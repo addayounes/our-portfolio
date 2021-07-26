@@ -1,0 +1,22 @@
+.works,
+.works > * > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.works {max-width: 100%}
+.works > * > a img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: .15s ease-out;
+}
+.works > * {
+    flex-basis: 80%;
+    width: fit-content;
+    overflow: hidden;
+}
+.works > * > a img:hover {
+    transform: scale(1.09);
+    transition: .3s ease-out;
+}
+.darken-image {filter: brightness(.35)}

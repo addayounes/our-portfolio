@@ -1,0 +1,40 @@
+.technologies {
+    width: 100%;
+    padding: 2em 0 5em;
+}
+.technologies h1 {
+    text-align: center;
+    margin: 3em 0 4em;
+    font-weight: var(--fw-light);
+}
+.techs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.techs-col {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.techs-col > svg {transition: .2s ease-out}
+.techs-col > svg:hover {transform: scale(1.09)}
+.techs-col .tech-name {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: PopUp .3s ease-out forwards;
+}
+
+@keyframes PopUp {
+    from {
+        transform: translate(-50%, 0) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -40px) scale(1);
+        opacity: 1;
+    } 
+}

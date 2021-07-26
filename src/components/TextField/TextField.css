@@ -1,0 +1,56 @@
+.input {
+    position: relative;
+    margin-bottom: 1.5rem
+}
+
+.input input, .input textarea {
+    width: 100%;
+    padding: 1em 1em 1em 1.5em;
+    border: 2px solid var(--clr-primary-light);
+    border-radius: 100px;
+    outline: none;
+    font-size: var(--fz-m)
+}
+.error-text {
+    font-size: var(--fz-s);
+    position: absolute;
+    left: 20px;
+    top: 3.5rem
+}
+.message-sent {top: 6.2rem !important}
+.message-sent-icon {margin-right: .5rem}
+.input textarea {
+    resize: none;
+    font-family: 'Montserrat';
+    border-radius: 25px !important
+}
+.disabled {
+    background-color: var(--clr-primary-light) !important;
+    cursor: not-allowed !important;
+}
+.active-submit {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    font-size: var(--button-fz);
+    border-radius: 100px;
+    background-color: var(--clr-primary);
+    cursor: pointer;
+    color: #fff;
+    transition: .15s ease-out;
+}
+.active-submit:hover {
+    box-shadow: 0 8px 20px 0 var(--clr-primary-light);
+    transition: .15s ease-out
+}
+.contact-us {
+    padding: 4em 0 0;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.contact-us h1 {
+    font-weight: var(--fw-light);
+    margin: 0 0 3rem;
+    text-align: center;
+
+}

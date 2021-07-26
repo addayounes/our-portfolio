@@ -1,0 +1,11 @@
+.btn {
+    text-decoration: none;
+    padding: 1em 1.5em;
+    border-radius: var(--border-radius);
+    font-weight: var(--fw-bold);
+    font-family: 'Montserrat' !important;
+    transition: .15s ease-out;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
