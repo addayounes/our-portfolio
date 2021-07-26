@@ -18,7 +18,10 @@
     justify-content: center;
     position: relative;
 }
-.techs-col > svg {transition: .2s ease-out}
+.techs-col > svg {
+    transition: .2s ease-out;
+    font-size: 60px !important;
+}
 .techs-col > svg:hover {transform: scale(1.09)}
 .techs-col .tech-name {
     position: absolute;
@@ -26,6 +29,14 @@
     left: 50%;
     transform: translateX(-50%);
     animation: PopUp .3s ease-out forwards;
+}
+
+@media only screen and (max-width: 850px) {
+    .techs-col > svg {font-size: 45px !important}
+    .technologies h1 {
+        max-width: 18ch;
+        margin: 2em auto 3em;
+    }
 }
 
 @keyframes PopUp {

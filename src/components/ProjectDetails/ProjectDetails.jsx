@@ -4,7 +4,7 @@ import { FaAngleLeft } from "react-icons/fa";
 import { useHistory } from "react-router";
 import "./ProjectDetails.css";
 
-const ProjectDetails = ({ project }) => {
+const ProjectDetails = ({ project, Language }) => {
     const { title, description, demo, showUpImage } = project;
     const history = useHistory();
     const style = {
@@ -17,7 +17,7 @@ const ProjectDetails = ({ project }) => {
                 <div className="project-details__infos">
                     <FaAngleLeft onClick={() => history.push("/")} />
                     <h1>{title}</h1>
-                    <p>{description}</p>
+                    <p>{description[Language]}</p>
                     <Button
                         variant="outlined"
                         color="white"

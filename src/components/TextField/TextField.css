@@ -45,12 +45,15 @@
 }
 .contact-us {
     padding: 4em 0 0;
-    max-width: 450px;
+    width: min(450px, 85%);
     margin: 0 auto;
 }
 .contact-us h1 {
     font-weight: var(--fw-light);
     margin: 0 0 3rem;
     text-align: center;
+}
 
+@media only screen and (max-width: 850px) {
+    .contact-us{margin: 0 auto 1.5rem}
 }

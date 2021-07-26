@@ -3,21 +3,16 @@ import Button from "../Button/Button";
 import Animated from "../../Assets/Programmer.gif";
 import "./Hero.css";
 import { Link } from "react-scroll";
+import language from "../../language";
 
-const Hero = () => {
+const Hero = ({ Language }) => {
     return (
         <section className="hero" name="hero">
             <div className="hero-split" id="container">
                 <div className="hero-split__left">
                     <div className="hero__heading">
-                        <h1>
-                            Vous cherchez à vous démarquer davantage ? obtenir
-                            un site Web
-                        </h1>
-                        <p>
-                            Nous vous aidons à paraître plus professionnel avec
-                            un site Web qui reflète votre expérience
-                        </p>
+                        <h1>{language[Language].Hero.firstHeading}</h1>
+                        <p>{language[Language].Hero.secondHeading} </p>
                     </div>
                     <Link
                         to="contact"
@@ -28,7 +23,7 @@ const Hero = () => {
                     >
                         <Button
                             to="contact"
-                            label="Nous contacter"
+                            label={language[Language].Hero.Button}
                             boxShadow="var(--clr-primary-light)"
                         />
                     </Link>

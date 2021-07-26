@@ -6,14 +6,14 @@ import Hero from "./components/Hero/Hero";
 import Techs from "./components/Techs/Techs";
 import Works from "./components/Works/Works";
 
-const Home = () => {
+const Home = ({ Language }) => {
     return (
         <>
-            <Hero />
+            <Hero Language={Language} />
             <Works />
-            <Techs />
-            <About />
-            <Contact />
+            <Techs Language={Language} />
+            <About Language={Language} />
+            <Contact Language={Language} />
             <Footer />
         </>
     );

@@ -6,8 +6,10 @@ import MACShowUP from "../../Assets/website-mac.png";
 export const projects = [
     {
         title: "Crispy Chicken",
-        description:
-            "Crispy Chicken is a restaurant website we designed & developed.",
+        description: {
+            fr: "Crispy Chicken est un site de restaurant que nous designer et développé",
+            en: "Crispy Chicken is a restaurant website we designed & developed.",
+        },
         demo: "https://addayounes.github.io/CrispyChicken/",
         thumbnail: Crispy,
         showUpImage: CrispyShowUP,
@@ -15,8 +17,10 @@ export const projects = [
     },
     {
         title: "MAC Science Club",
-        description:
-            "MAC is a website we designed & developed for a science club.",
+        description: {
+            fr: "Le Mechanical Activities Club est une structure estudiantine scientifique regroupant des étudiants de l’École Nationale Polytechnique d’Oran – Maurice Audin – autour d’un domaine d’activité technologique.",
+            en: "The Mechanical Activities Club is a scientific student structure bringing together students from the National Polytechnic School of Oran - Maurice Audin - around a field of technological activity.",
+        },
         demo: "https://www.mac-club-oran.com/",
         thumbnail: MAC,
         showUpImage: MACShowUP,

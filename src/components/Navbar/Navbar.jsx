@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
+import language from "../../language";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ Language, setLanguage }) => {
     const [scroll, setsSroll] = useState(false);
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) setsSroll(true);
@@ -28,7 +29,7 @@ const Navbar = () => {
                                 duration={300}
                                 offset={-70}
                             >
-                                Works
+                                {language[Language].Navbar.firstLink}
                             </Link>
                         </li>
                         <li>
@@ -40,7 +41,7 @@ const Navbar = () => {
                                 duration={300}
                                 offset={-70}
                             >
-                                About
+                                {language[Language].Navbar.secondLink}
                             </Link>
                         </li>
                         <li>
@@ -56,7 +57,26 @@ const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div className="nav-cta"></div>
+                    <div className="nav-lang-change">
+                        <ul>
+                            <li
+                                className={`${
+                                    Language === "fr" ? "selected-lang" : ""
+                                }`}
+                                onClick={() => setLanguage("fr")}
+                            >
+                                <p>FR</p>
+                            </li>
+                            <li
+                                className={`${
+                                    Language === "en" ? "selected-lang" : ""
+                                }`}
+                                onClick={() => setLanguage("en")}
+                            >
+                                <p>EN</p>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </header>

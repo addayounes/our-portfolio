@@ -4,6 +4,7 @@ import * as yup from "yup";
 import emailjs from "emailjs-com";
 import MyTextField from "../TextField/MyTextField";
 import "../TextField/TextField.css";
+import language from "../../language";
 
 const messageSchema = yup.object({
     name: yup
@@ -32,7 +33,7 @@ const submitForm = (data) => {
     sendMessage(templateId, userId, data);
 };
 
-const Contact = () => {
+const Contact = ({ Language }) => {
     const [messageSent, setMessageSent] = useState(false);
     const initialValues = {
         name: "",
@@ -42,7 +43,7 @@ const Contact = () => {
     return (
         <section className="contact" name="contact">
             <div className="contact-us">
-                <h1>Nous contacter</h1>
+                <h1>{language[Language].Contact.heading}</h1>
                 <Formik
                     validationSchema={messageSchema}
                     initialValues={initialValues}
@@ -62,13 +63,19 @@ const Contact = () => {
                             <Form>
                                 <Field
                                     name="name"
-                                    placeholder="Nom"
+                                    placeholder={
+                                        language[Language].Contact
+                                            .namePlaceholder
+                                    }
                                     type="text"
                                     as={MyTextField}
                                 />
                                 <Field
                                     name="email"
-                                    placeholder="Adresse E-mail"
+                                    placeholder={
+                                        language[Language].Contact
+                                            .emailPlaceholder
+                                    }
                                     type="text"
                                     as={MyTextField}
                                 />
@@ -83,7 +90,7 @@ const Contact = () => {
                                 <input
                                     disabled={isSubmitting}
                                     type="submit"
-                                    value="Envoyer"
+                                    value={language[Language].Contact.Button}
                                     className={`active-submit ${
                                         isSubmitting ? "disabled" : ""
                                     }`}

@@ -38,6 +38,23 @@
     background-color: var(--clr-primary);
     animation: ColorRainbow 5s ease-out infinite;
 }
+
+@media only screen and (max-width: 850px) {
+    .hero{
+        height: auto;
+        margin: 2rem 0 3rem
+    }
+    .hero-split{
+        flex-direction: column-reverse;
+    }
+    .hero-split__left {margin: 1rem 0 0 0}
+    .hero-split__left::before {display: none}
+    .hero-split__left .hero__heading h1 {
+        font-size: var(--fz-xl);
+        max-width: 20ch;
+    }
+}
+
 @keyframes ColorRainbow {
     0% {
         background-color: var(--clr-primary);

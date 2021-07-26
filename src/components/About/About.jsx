@@ -1,11 +1,12 @@
 import React from "react";
+import language from "../../language";
 import "./About.css";
 
-const About = () => {
+const About = ({ Language }) => {
     return (
         <section className="about-us-section" name="about-us">
             <div className="about-us" id="container">
-                <h1>Qui sommes nous?</h1>
+                <h1>{language[Language].About.heading}</h1>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Tempore, aperiam amet iusto vitae corporis ex iure doloribus

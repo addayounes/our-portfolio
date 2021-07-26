@@ -25,20 +25,21 @@
     transition: .35s ease-out
 }
 .navbar {height: 72px}
+nav {display: flex}
 .navbar nav ul {list-style: none}
-.navbar nav ul li + li {margin-left: 2rem}
-.navbar nav ul li a {
+.navbar nav > ul li + li {margin-left: 2rem}
+.navbar nav > ul li a {
     font-weight: var(--fw-normal);
     cursor: pointer;
     transition: .15s ease-out;
     position: relative;
 }
-.navbar nav ul li a.active-link,
-.navbar nav ul li a:hover {
+.navbar nav > ul li a.active-link,
+.navbar nav > ul li a:hover {
     color: var(--clr-primary);
     transition: .15s ease-out;
 }
-.navbar nav ul li a.active-link::before {
+.navbar nav > ul li a.active-link::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -48,6 +49,24 @@
     border-radius: 100px;
     left: 50%;
     animation: scaleHz .2s ease-out forwards;
+}
+.nav-lang-change {margin-left: 2rem}
+.nav-lang-change ul li + li {margin-left: .35rem}
+.nav-lang-change ul li {
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    padding: .5em;
+    border-radius: 50%;
+    user-select: none;
+    transition: .2s ease-out;
+}
+.nav-lang-change ul li:not(.selected-lang):hover {
+    background-color: rgb(245, 245, 245);
+    transition: .2s background-color ease-out
+}
+.nav-lang-change ul li.selected-lang {
+    background-color: var(--clr-primary);
+    color: #fff;
 }
 
 @keyframes scaleHz {

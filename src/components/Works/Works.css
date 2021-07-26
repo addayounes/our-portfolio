@@ -20,3 +20,8 @@
     transition: .3s ease-out;
 }
 .darken-image {filter: brightness(.35)}
+
+@media only screen and (max-width: 850px) {
+    .works {flex-direction: column}
+    .darken-image {filter: brightness(1)}
+}
