@@ -68,8 +68,40 @@ nav {display: flex}
     background-color: var(--clr-primary);
     color: #fff;
 }
+.nav-icon {display: none}
+
+@media only screen and (max-width: 850px) {
+    .nav-icon {display: block}
+    .navbar nav > ul {display: none}
+    .navbar nav > ul.hidden li a.active-link::before{display: none}
+    .navbar nav > ul.hidden {
+        display: block;
+        position: absolute;
+        background-color: var(--clr-primary-light);
+        left: 0;
+        top: 72px;
+        width: 100%;
+        text-align: center;
+        animation: slideDown ease-out .2s forwards;
+    }
+    .navbar nav > ul.hidden li {padding: 1em}
+    .navbar nav > ul.hidden li + li {margin: 0}
+    .navbar nav > ul.hidden li:hover {background-color: var(--clr-primary)}
+    .navbar nav > ul.hidden li a.active-link,
+    .navbar nav > ul.hidden li a:hover {color: black}
+    .navbar nav > svg {
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}
 
 @keyframes scaleHz {
     from {transform: scaleX(0) translateX(-50%)}
     to {transform: scaleX(1) translateX(-50%)}
+}
+@keyframes slideDown {
+    from {transform: scaleY(0);
+    transform-origin: top;}
+    to {transform: scaleY(1);
+        transform-origin: top;}
 }

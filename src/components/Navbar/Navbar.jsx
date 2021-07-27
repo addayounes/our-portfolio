@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
+import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import language from "../../language";
 import "./Navbar.css";
 
 const Navbar = ({ Language, setLanguage }) => {
     const [scroll, setsSroll] = useState(false);
+    const [Nav, setNav] = useState(false);
+    const closeNav = () => setNav(false);
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) setsSroll(true);
         else setsSroll(false);
@@ -14,14 +17,15 @@ const Navbar = ({ Language, setLanguage }) => {
         <header className={`navbar-header ${scroll ? "scroll-border" : ""}`}>
             <div className="navbar" id="container">
                 <div className="logo">
-                    <Link to="hero" smooth={true} duration={300} offset={-80}>
+                    <Link to="hero" smooth={true} duration={300} offset={-100}>
                         <RouterLink to="/">Logo</RouterLink>
                     </Link>
                 </div>
                 <nav>
-                    <ul>
+                    <ul className={`${Nav ? "hidden" : ""}`}>
                         <li>
                             <Link
+                                onClick={closeNav}
                                 activeClass="active-link"
                                 to="work"
                                 spy={true}
@@ -34,6 +38,7 @@ const Navbar = ({ Language, setLanguage }) => {
                         </li>
                         <li>
                             <Link
+                                onClick={closeNav}
                                 activeClass="active-link"
                                 to="about-us"
                                 spy={true}
@@ -46,6 +51,7 @@ const Navbar = ({ Language, setLanguage }) => {
                         </li>
                         <li>
                             <Link
+                                onClick={closeNav}
                                 activeClass="active-link"
                                 to="contact"
                                 spy={true}
@@ -77,6 +83,19 @@ const Navbar = ({ Language, setLanguage }) => {
                             </li>
                         </ul>
                     </div>
+                    {Nav ? (
+                        <RiCloseFill
+                            className="nav-icon"
+                            onClick={closeNav}
+                            size={32}
+                        />
+                    ) : (
+                        <RiMenu3Fill
+                            className="nav-icon"
+                            onClick={() => setNav((v) => !v)}
+                            size={32}
+                        />
+                    )}
                 </nav>
             </div>
         </header>

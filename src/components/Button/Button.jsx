@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
 import "./Button.css";
 
 const Button = ({
@@ -64,18 +63,19 @@ const Button = ({
         right: EndIcon && hover ? "-3px" : "0",
     };
     return (
-        <RouterLink
+        <a
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             className="btn"
-            target="_blank"
             style={style}
-            to={{ pathname: toLink }}
+            target="_blank"
+            rel="noreferrer"
+            href={toLink}
         >
             {StartIcon && <StartIcon style={IconStyle} />}
             {label}
             {EndIcon && <EndIcon style={IconStyle} />}
-        </RouterLink>
+        </a>
     );
 };
 

@@ -1,6 +1,6 @@
 *,
 *::before,
-*::after {box-sizing: border-box}
+*::after {box-sizing: border-box;-webkit-tap-highlight-color: transparent}
 
 :root {
   --border: 1px solid black;
