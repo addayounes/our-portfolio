@@ -17,12 +17,11 @@
     cursor: pointer;
     transition: .2s ease-in;
 }
-.logo a {
-    text-decoration: none;
-}
+.logo a {text-decoration: none}
+.logo img {max-width: 110px}
 .logo:hover {
     transform: scale(1.03);
-    transition: .35s ease-out
+    transition: .25s ease-out
 }
 .navbar {height: 72px}
 nav {display: flex}
@@ -60,6 +59,7 @@ nav {display: flex}
     user-select: none;
     transition: .2s ease-out;
 }
+.nav-lang-change ul li p {font-size: var(--fz-s)}
 .nav-lang-change ul li:not(.selected-lang):hover {
     background-color: rgb(245, 245, 245);
     transition: .2s background-color ease-out
@@ -89,6 +89,7 @@ nav {display: flex}
     .navbar nav > ul.hidden li:hover {background-color: var(--clr-primary)}
     .navbar nav > ul.hidden li a.active-link,
     .navbar nav > ul.hidden li a:hover {color: black}
+    .logo img {max-width: 100px}
     .navbar nav > svg {
         margin-left: 1rem;
         cursor: pointer;

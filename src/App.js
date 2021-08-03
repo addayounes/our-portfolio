@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
 import { projects } from "./components/Works/Projects";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
@@ -37,6 +37,7 @@ function App() {
                             />
                         )}
                     />
+                    <Redirect from="/" to="/our-portfolio" />
                 </Switch>
             </BrowserRouter>
         </div>

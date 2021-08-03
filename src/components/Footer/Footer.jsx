@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
             <Wave className="wave" />
             <footer>
-                <p>Nom &#169; {new Date().getFullYear()}</p>
+                <p>inovv &#169; {new Date().getFullYear()}</p>
             </footer>
         </div>
     );

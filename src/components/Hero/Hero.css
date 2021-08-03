@@ -53,6 +53,7 @@
         font-size: var(--fz-xl);
         max-width: 20ch;
     }
+    /* .hero-split__right{display: none;} */
 }
 
 @keyframes ColorRainbow {

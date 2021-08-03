@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import language from "../../language";
+import Logo from '../../Assets/inovv-logo.png'
 import "./Navbar.css";
 
 const Navbar = ({ Language, setLanguage }) => {
@@ -18,7 +19,9 @@ const Navbar = ({ Language, setLanguage }) => {
             <div className="navbar" id="container">
                 <div className="logo">
                     <Link to="hero" smooth={true} duration={300} offset={-100}>
-                        <RouterLink to="/">Logo</RouterLink>
+                        <RouterLink to="/">
+                            <img src={Logo} alt="inovv" />
+                        </RouterLink>
                     </Link>
                 </div>
                 <nav>
