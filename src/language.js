@@ -6,7 +6,7 @@ const language = {
         },
         Hero: {
             firstHeading:
-                "Vous cherchez à vous démarquer davantage ? obtenir un site Web",
+                "Vous cherchez à vous démarquer davantage ? Obtenir un site Web",
             secondHeading:
                 "Nous vous aidons à paraître plus professionnel avec un site Web qui reflète votre expérience",
             Button: "Nous contacter",
