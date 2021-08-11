@@ -1,5 +1,6 @@
-import { FaReact, FaNode,  } from 'react-icons/fa'
+import { FaReact, FaNode } from 'react-icons/fa'
 import { SiRedux, SiMongodb, SiFirebase  } from 'react-icons/si'
+import { IoLogoVue } from 'react-icons/io5'
 
 export const technologies = [
     {
@@ -11,6 +12,11 @@ export const technologies = [
         name: 'Redux',
         Logo: SiRedux,
         color: '#764ABC'
+    },
+    {
+        name: 'Vue',
+        Logo: IoLogoVue,
+        color: '#41B883'
     },
     {
         name: 'NodeJS',
